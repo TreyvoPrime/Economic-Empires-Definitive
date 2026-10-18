@@ -10,6 +10,7 @@ public class Countries {
         this.name = x;
         this.GDP = y;
         this.region = z;
+        this.treasury = 10000;
     }
     public String getCountryname() {
         return name;
@@ -22,5 +23,11 @@ public class Countries {
     }
     public void setGDP(double GDP) {
        this.GDP = GDP;
+    }
+    public double getTreasury() {
+        return treasury;
+    }
+    public void setTreasury(double treasury) {
+        this.treasury = treasury;
     }
 }

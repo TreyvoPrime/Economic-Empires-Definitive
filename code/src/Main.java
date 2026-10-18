@@ -60,10 +60,23 @@ public class Main {
                     System.out.println("2. 🏭Factory");
                     System.out.println("Choose a option");
                     int buildingChoice = input.nextInt();
+                    int farmsBuilt =0;
                     if (buildingChoice == 0) {
                         isBuilding = false;
                     } else if (buildingChoice == 1) {
-                        System.out.println();
+                            System.out.println("How many farms would you like to build?");
+                            int farmsBuilding = input.nextInt();
+                            for (int a = 0; a < farmsBuilding; a++) {
+                                if (country.getTreasury() >= farm.getCost()) {
+                                    country.setTreasury(country.getTreasury() - farm.getCost()
+                                    );
+                                    farmsBuilt++;
+                                    System.out.println("Farms built: " + farmsBuilt);
+                                } else {
+                                    System.out.println("Not enough money in the treasury to build another farm!");
+                                    break;
+                                }
+                            }
                     }
                 }
 
