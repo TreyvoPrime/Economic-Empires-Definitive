@@ -74,7 +74,7 @@ public class Main {
                                     System.out.println("Farms built: " + farmsBuilt);
                                 } else {
                                     System.out.println("Not enough money in the treasury to build another farm!");
-                                    break;
+                                    break; 
                                 }
                             }
                     }
